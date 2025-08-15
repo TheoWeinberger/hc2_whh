@@ -112,3 +112,4 @@ If you use this in research, please cite:
 - N.R. Werthamer, E. Helfand, and P.C. Hohenberg, *Phys. Rev.* **147**, 295 (1966).
 - A. Gurevich, *Phys. Rev. B* **67**, 184515 (2003).
 - A. Gurevich, *Phys. Rev. B* **82**, 184504 (2010).
+- T. I. Weinberger et al. *arXiv* **2505.12131** (2025).
