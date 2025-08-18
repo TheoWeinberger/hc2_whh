@@ -41,16 +41,16 @@ python hc2_multifit.py "<file1.csv>, <file2.csv>, ..." <mode> [options]
 ### Examples
 ```bash
 # Fit a single-band Pauli-limited model to one dataset
-python hc2_multifit.py "sc33.txt" pauli
+python hc2_multifit.py "file1.csv" pauli
 
 # Fit two datasets to a two-band Pauli-limited model with symmetric couplings
-python hc2_multifit.py "sc11.txt, sc33.txt" 2band_pauli
+python hc2_multifit.py "file1.csv, file2.csv" 2band_pauli
 
 # Fit two-band Pauli-limited with independent λ12 and λ21
-python hc2_multifit.py "sc11.txt, sc33.txt" 2band_pauli --untie_interband
+python hc2_multifit.py "file1.csv, file2.csv" 2band_pauli --untie_interband
 
 # Fit single-band Pauli-limited with fixed Tc and α
-python hc2_multifit.py "sc33.txt" pauli --Tc_fixed=1.65 --alpha=0.8
+python hc2_multifit.py "file1.csv" pauli --Tc_fixed=1.65 --alpha=0.8
 ```
 
 ### Options
