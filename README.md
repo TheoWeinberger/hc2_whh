@@ -27,7 +27,7 @@ pip install numpy pandas matplotlib scipy
 
 ### Command Syntax
 ```bash
-python hc2_multifit.py "<file1.csv>, <file2.csv>, ..." <mode> [options]
+python hc2_whh_fit.py "<file1.csv>, <file2.csv>, ..." <mode> [options]
 ```
 - `<file1.csv>, <file2.csv>, ...` — One or more CSV/TXT files containing `T` and `H` columns.
 - `<mode>` — Model type to fit (see below).
@@ -41,16 +41,16 @@ python hc2_multifit.py "<file1.csv>, <file2.csv>, ..." <mode> [options]
 ### Examples
 ```bash
 # Fit a single-band Pauli-limited model to one dataset
-python hc2_multifit.py "file1.csv" pauli
+python hc2_whh_fit.py "file1.csv" pauli
 
 # Fit two datasets to a two-band Pauli-limited model with symmetric couplings
-python hc2_multifit.py "file1.csv, file2.csv" 2band_pauli
+python hc2_whh_fit.py "file1.csv, file2.csv" 2band_pauli
 
 # Fit two-band Pauli-limited with independent λ12 and λ21
-python hc2_multifit.py "file1.csv, file2.csv" 2band_pauli --untie_interband
+python hc2_whh_fit.py "file1.csv, file2.csv" 2band_pauli --untie_interband
 
 # Fit single-band Pauli-limited with fixed Tc and α
-python hc2_multifit.py "file1.csv" pauli --Tc_fixed=1.65 --alpha=0.8
+python hc2_whh_fit.py "file1.csv" pauli --Tc_fixed=1.65 --alpha=0.8
 ```
 
 ### Options
@@ -102,7 +102,7 @@ If a two-band Pauli fit produces unphysical parameters:
 1. The program first tries an orbital fit to seed parameters.
 2. If instability persists, it will print recommended λ-values to fix in a rerun:
    ```bash
-   python hc2_multifit.py "sc11.txt, sc33.txt" 2band_pauli --lam11=... --lam22=... --lam12=...
+   python hc2_whh_fit.py "sc11.txt, sc33.txt" 2band_pauli --lam11=... --lam22=... --lam12=...
    ```
 
 ---
